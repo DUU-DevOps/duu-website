@@ -1,36 +1,48 @@
 from flask import Flask, jsonify
-import sqlite3
 from flask_cors import cross_origin
-
-connection = None
-CONNECTION_TIMEOUT = 5000
-
-def connect_db():
-
-  conn = sqlite3.connect('database.db')
-  print("connected to db")
-  return conn
-
+from flask_sqlalchemy import SQLAlchemy
   
 def get_cursor(connection): 
   connection.ping(reconnect=True)
   return connection.cursor()
 
 app = Flask(__name__)
+app.config.from_pyfile('config.py')
+db = SQLAlchemy(app)
+
+class Alumni(db.Model):
+  id = db.Column(db.Integer, primary_key = True)
+  name = db.Column(db.String(200), nullable=False)
+
+  def __repr__(self):
+    return '<Alum %r>' % self.id
+
+  def __init__(self, name):
+    self.name = name
+
+def format_alum(alum):
+  return {
+    "name": alum.name,
+    "id": alum.id
+  }
 
 @app.route('/')
 @cross_origin()
 def hello_world():
     # test connection to database by fetching data from table 'users'
-    connection = connect_db()
-    cur = connection.cursor()
-    cur.execute('CREATE TABLE IF NOT EXISTS users (name TEXT)')
-    cur.execute('INSERT INTO users (name) VALUES (?)', ("alice",))  
-    getUser = "SELECT * FROM users"
-    cur.execute(getUser)
-    results = cur.fetchone()
-    jsonResp = {'hello': 'world', 'results': results}
-    return jsonify(jsonResp)
+
+    alum = Alumni("Alice")
+    db.session.add(alum)
+    db.session.commit()
+    events = Alumni.query.order_by(Alumni.name.asc()).all()
+    event_list = []
+    for event in events:
+      event_list.append(format_alum(event))
+    jsonResp = {"events": event_list}
+    return jsonResp 
+
+db.init_app(app)
+with app.app_context(): db.create_all()
 
 if __name__ == '__main__':
     app.run(debug=False)

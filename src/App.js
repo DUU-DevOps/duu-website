@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Error from './components/Error';
 import Navigation from './components/Navigation';
 import Login from './components/Login';
+import Alumni from './components/Alumni';
  
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
             <Routes>
             <Route path="/" element={<Home/>} exact/>            
             <Route path="/login" element={<Login/>} exact/>            
+            <Route path="/alumni" element={<Alumni/>} exact/>            
             <Route path ="*" element={<Error/>}/>
            </Routes>
         </div> 
