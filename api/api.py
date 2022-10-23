@@ -2,10 +2,6 @@ from flask import Flask, jsonify
 from flask_cors import cross_origin
 from flask_sqlalchemy import SQLAlchemy
   
-def get_cursor(connection): 
-  connection.ping(reconnect=True)
-  return connection.cursor()
-
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 db = SQLAlchemy(app)
