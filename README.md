@@ -29,6 +29,6 @@ Installs necessary Python Flask dependencies.
 Runs Flask in development mode. \
 Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
 
-If React, Flask, and SQLite are running correctly, then "world" and "alice" should populate on the homepage.
+If React, Flask, and SQLite are running correctly, then the "List of Alumni" tab should be repeatedly populated with the name "Alice".
 
 Run `npx prettier --write .` to format file spacing.
