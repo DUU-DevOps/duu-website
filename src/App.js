@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Error from "./pages/Error/Error";
 import Navigation from "./pages/Navigation/Navigation";
 import Login from "./pages/Login/Login";
+import Committees from "./pages/Committees/Committees";
 import Alumni from "./pages/Alumni/Alumni";
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <Routes>
             <Route path="/" element={<Home />} exact />
             <Route path="/login" element={<Login />} exact />
+            <Route path="/committees" element={<Committees />} exact />
             <Route path="/alumni" element={<Alumni />} exact />
             <Route path="*" element={<Error />} />
           </Routes>
