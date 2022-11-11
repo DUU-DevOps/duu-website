@@ -7,3 +7,31 @@
 .Home-videoContainer {
   aspect-ratio: 16/9;
 }
+
+.Home-videoTextContainer{
+  position: relative;
+}
+
+.Home-titleTextWrapper {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+}
+
+.Home-titleText {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .Home-titleTextWrapper {
+    top: 40%;
+  }
+
+  .Home-titleText{
+    font-size: 85px;
+  }
+}

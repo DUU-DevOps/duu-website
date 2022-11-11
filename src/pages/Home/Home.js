@@ -14,6 +14,9 @@ function Video(props) {
           Your browser doesn't support iframes
         </iframe>
       </div>
+      <div className="Home-titleTextWrapper">
+        <h1 className="Home-titleText">Duke University Union</h1>
+      </div>
     </div>
   );
 }
@@ -28,7 +31,6 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>This is the Homepage</h1>
         <Video />
       </div>
     );
