@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Col, Form, FormGroup, Label, Input } from "reactstrap";
 import "./Home.css";
 
 function Video(props) {
@@ -20,6 +21,28 @@ function Video(props) {
     </div>
   );
 }
+
+function CommitteeBanner() {
+  return (
+    <div className="CommitteeBannerContainer">
+      <div className="Committee-Text">
+        <h3 className="Committee-Text">Committees</h3>
+      </div>
+      <div className="Explore-Committees">
+        <div className="Committee-MainText">
+          <h3 className="Committee-MainText">
+            Duke University Union is made up of 17 committees, each with an
+            important and unique role.
+          </h3>
+        </div>
+        <div className="Committee-Button">
+          <h3 className="Committee-MainText"> {">"} EXPLORE COMMITTEES</h3>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -32,6 +55,7 @@ export default class Home extends Component {
     return (
       <div>
         <Video />
+        <CommitteeBanner />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Committees.css";
-import { Banner } from "../../components/Banner.js"
+import { Banner } from "../../components/Banner.js";
 
 export default class Committees extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ export default class Committees extends Component {
   render() {
     return (
       <div>
-        <Banner/>
+        <Banner />
       </div>
     );
   }

@@ -1,9 +1,5 @@
 function Banner(props) {
-    return (
-    <div>
-    hello
-    </div>
-    )
+  return <div>hello</div>;
 }
 
-export {Banner};
+export { Banner };
