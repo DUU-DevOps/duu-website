@@ -8,7 +8,7 @@
   aspect-ratio: 16/9;
 }
 
-.Home-videoTextContainer{
+.Home-videoTextContainer {
   position: relative;
 }
 
@@ -26,12 +26,60 @@
   font-size: 50px;
 }
 
+.CommitteeBannerContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.Committee-Text {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.Explore-Committees {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.Committee-Button {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  background: #4678bb;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 18px;
+  padding: 17px 40px;
+  margin-top: 17px;
+  line-height: 21px;
+  font-size: 18px;
+}
+
 @media screen and (min-width: 768px) {
   .Home-titleTextWrapper {
     top: 40%;
   }
 
-  .Home-titleText{
+  .Home-titleText {
     font-size: 85px;
+  }
+
+  .CommitteeBannerContainer {
+    flex-direction: row;
+  }
+
+  .Committee-Text {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .Explore-Committees {
+    width: 50%;
+    padding: 5px 5px;
   }
 }
