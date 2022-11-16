@@ -60,6 +60,16 @@
   font-size: 18px;
 }
 
+.Committee-Button:hover {
+  background: #5386e0;
+}
+
+.Committee-LinkText,
+.Committee-LinkText:hover {
+  color: white;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .Home-titleTextWrapper {
     top: 40%;

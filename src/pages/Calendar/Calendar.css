@@ -1,0 +1,5 @@
+/* update iframe height to account for navigation bar */
+.Calendar-iframe {
+  height: 94vh;
+  width: 100%;
+}

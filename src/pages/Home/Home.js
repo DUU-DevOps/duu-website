@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Form, FormGroup, Label, Input } from "reactstrap";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Video(props) {
@@ -36,7 +36,9 @@ function CommitteeBanner() {
           </h3>
         </div>
         <div className="Committee-Button">
-          <h3 className="Committee-MainText"> {">"} EXPLORE COMMITTEES</h3>
+          <Link to="/committees" className="Committee-LinkText">
+            {">"} EXPLORE COMMITTEES
+          </Link>
         </div>
       </div>
     </div>

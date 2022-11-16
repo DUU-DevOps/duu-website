@@ -6,6 +6,7 @@ import Navigation from "./pages/Navigation/Navigation";
 import Login from "./pages/Login/Login";
 import Committees from "./pages/Committees/Committees";
 import Alumni from "./pages/Alumni/Alumni";
+import Calendar from "./pages/Calendar/Calendar";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Routes>
             <Route path="/" element={<Home />} exact />
             <Route path="/login" element={<Login />} exact />
+            <Route path="/calendar" element={<Calendar />} exact />
             <Route path="/committees" element={<Committees />} exact />
             <Route path="/alumni" element={<Alumni />} exact />
             <Route path="*" element={<Error />} />
