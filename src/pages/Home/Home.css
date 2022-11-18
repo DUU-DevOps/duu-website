@@ -23,6 +23,7 @@
 .Home-titleText {
   color: white;
   text-align: center;
+  font-family: "Karla Bold";
   font-size: 50px;
 }
 
@@ -38,6 +39,7 @@
   align-content: center;
   align-items: center;
   font-weight: bolder;
+  font-family: "Karla Bold";
 }
 
 .Explore-Committees {
@@ -68,6 +70,10 @@
 .Committee-LinkText:hover {
   color: white;
   text-decoration: none;
+}
+
+.Committee-MainText {
+  font-size: 24px;
 }
 
 @media screen and (min-width: 768px) {

@@ -8,6 +8,12 @@ import Committees from "./pages/Committees/Committees";
 import Alumni from "./pages/Alumni/Alumni";
 import Calendar from "./pages/Calendar/Calendar";
 
+import "./index.css";
+
+// fonts
+import "./assets/fonts/karla-bold.ttf";
+import "./assets/fonts/karla-light.ttf";
+
 class App extends Component {
   render() {
     return (
